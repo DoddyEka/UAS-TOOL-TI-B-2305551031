@@ -1,0 +1,224 @@
+:root {
+  --utama: #b6895b;
+
+  --latar: #010101;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  background-color: rgb(0, 7, 7);
+}
+
+.my-3 table table-bordered {
+  background-color: rgb(26, 1, 1);
+}
+/* slide */
+.container {
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(img/poto\ web1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 150px 0 0 0;
+}
+
+.content-slide {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.imgslide {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 400px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.8);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: rgb(255, 254, 224);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+}
+
+.text {
+  color: #6f4444;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+}
+
+.content-slide .numberslide {
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+.btn {
+  position: absolute;
+  top: 105%;
+  display: flex;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  size: 25cm;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: antiquewhite;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--utama);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+/* media */
+
+/* laptop */
+@media screen and (max-width: 800px) {
+  .content-slide {
+    padding: 8px 50px 12px 50px;
+  }
+  .next {
+    right: 50px;
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* CSS */
+.table-container {
+  margin-top: 20px;
+}
+
+/* Mengatur tombol agar berada di tengah */
+.btn-primary {
+  width: 10%; /* Lebar tombol */
+  margin-right: 10px; /* Jarak antara tombol dengan tabel */
+}
+
+/* Untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+  .table-container {
+    margin-top: 10px;
+  }
+
+  .btn-primary {
+    margin-right: 0; /* Jika tidak ingin ada jarak antara tombol dengan tabel */
+    margin-bottom: 10px; /* Jarak antara tombol dengan tabel untuk layar kecil */
+  }
+}
